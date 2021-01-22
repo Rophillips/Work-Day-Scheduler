@@ -22,18 +22,106 @@
     <p class="lead">A Simple Calendar For Scheduling Your Workday</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="container container-fluid time-block">
+  <div class= "container">
     <!-- Timeblocks go here -->
 
     <!-- 9AM -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend row">
+        <span class="input-group-text hour">09:00 AM</span>
+      </div>
+      <textarea value="" id="hour9am" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+      <div class="input-group-append">
+        <button id="button9am" class="btn btn-outline-secondary saveBtn" type="button"><i
+            class="far fa-save"></i></button>
+      </div>
 
+      <div class="input-group mb-3">
+        <div class="input-group-prepend row">
+          <span class="input-group-text hour">10:00 AM</span>
+        </div>
+        <textarea value="" id="hour10am" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+        <div class="input-group-append">
+         <button id="button10am" class="btn btn-outline-secondary saveBtn" type="button"><i
+            class="far fa-save"></i></button>
+    </div>
 
+      <div class="input-group mb-3">
+       <div class="input-group-prepend row">
+        <span class="input-group-text hour">11:00 AM</span>
+       </div>
+       <textarea value="" id="hour11am" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+       <div class="input-group-append">
+        <button id="button11am" class="btn btn-outline-secondary saveBtn" type="button"><i
+           class="far fa-save"></i></button>
+    </div>
 
+      <div class="input-group mb-3">
+      <div class="input-group-prepend row">
+        <span class="input-group-text hour">12:00 PM</span>
+      </div>
+      <textarea value="" id="hour12pm" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+      <div class="input-group-append">
+        <button id="button12pm" class="btn btn-outline-secondary saveBtn" type="button"><i
+           class="far fa-save"></i></button>
 
+   </div>
 
+      <div class="input-group mb-3">
+      <div class="input-group-prepend row">
+       <span class="input-group-text hour">01:00 PM</span>
+      </div>
+      <textarea value="" id="hour1pm" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+      <div class="input-group-append">
+      <button id="button1pm" class="btn btn-outline-secondary saveBtn" type="button"><i
+          class="far fa-save"></i></button>
+   </div>
 
-  </div>
-  <script text="text/javascript">
+   <div class="input-group mb-3">
+      <div class="input-group-prepend row">
+       <span class="input-group-text hour">02:00 PM</span>
+      </div>
+      <textarea value="" id="hour2pm" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+      <div class="input-group-append">
+      <button id="button2pm" class="btn btn-outline-secondary saveBtn" type="button"><i
+          class="far fa-save"></i></button>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend row">
+        <span class="input-group-text hour">03:00 AM</span>
+      </div>
+      <textarea value="" id="hour3pm" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+      <div class="input-group-append">
+      <button id="button3pm" class="btn btn-outline-secondary saveBtn" type="button"><i
+          class="far fa-save"></i></button>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend row">
+        <span class="input-group-text hour">04:00 PM</span>
+      </div>
+      <textarea value="" id="hour4pm" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+      <div class="input-group-append">
+        <button id="button4pm" class="btn btn-outline-secondary saveBtn" type="button"><i
+           class="far fa-save"></i></button>
+
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend row">
+        <span class="input-group-text hour">05:00 PM</span>
+      </div>
+      <textarea value="" id="hour5pm" type="text" cols="100" rows="2" class="form-control description textarea"></textarea>
+      <div class="input-group-append">
+        <button id="button5pm" class="btn btn-outline-secondary saveBtn" type="button"><i
+          class="far fa-save"></i></button>
+    </div>
+        
+  
+  
+  
+   <script text="text/javascript">
     //current date is displayed
     var d = new Date();
     document.getElementById("currentDay").innerHTML = d.toDateString();
