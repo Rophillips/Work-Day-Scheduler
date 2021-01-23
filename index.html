@@ -26,76 +26,76 @@
     <!-- Timeblocks go here -->
 
     <!-- 9AM -->
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="nineAM">9AM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="nineAM">9AM</div>
       <div class="col-8 my-col col-b2 time-block" value="9">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="tenAM">10AM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="tenAM">10AM</div>
       <div class="col-8 my-col col-b2 time-block" value="10">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="elevenAM">11AM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="elevenAM">11AM</div>
       <div class="col-8 my-col col-b2 time-block" value="11">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="twelvePM">12PM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="twelvePM">12PM</div>
       <div class="col-8 my-col col-b2 time-block" value="12">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="onePM">1PM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="onePM">1PM</div>
       <div class="col-8 my-col col-b2 time-block" value="1">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="twoPM">2PM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="twoPM">2PM</div>
       <div class="col-8 my-col col-b2 time-block" value="2">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="threePM">3PM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="threePM">3PM</div>
       <div class="col-8 my-col col-b2 time-block" value="3">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="fourPM">4PM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="fourPM">4PM</div>
       <div class="col-8 my-col col-b2 time-block" value="4">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 my col col-b1 hour" id="fivePM">5PM</div>
+    <div class="row my-row">
+      <div class="col-2 my-col col-b1 hour" id="fivePM">5PM</div>
       <div class="col-8 my-col col-b2 time-block" value="5">
         <textarea class="task"></textarea>
     </div>
-      <div class="col-2 my col col-b3 saveBtn"></div>
+      <div class="col-2 my-col col-b3 saveBtn"></div>
       
     </div>
 
@@ -192,79 +192,13 @@
         <button id="button5pm" class="btn btn-outline-secondary saveBtn" type="button"><i
           class="far fa-save"></i></button>
     </div>-->
-        
-  
-  
-  
-   <script>
 
-    //current date is displayed
-    var d = new Date();
-    document.getElementById("currentDay").innerHTML = d.toDateString();
-    
-    //hours
-    var nine = document.querySelector("#nineAM");
-    var ten = document.querySelector("#tenAM");
-    var eleven = document.querySelector("#elevenAM");
-    var twelve = document.querySelector("#twelvePM");
-    var one = document.querySelector("#onePM");
-    var two = document.querySelector("#twoPM");
-    var three = document.querySelector("#threePM");
-    var four= document.querySelector("#fourPM");
-    var five = document.querySelector("#fivePM");
-    
-    var currentDay = new Date();
-    var years = ["2021", "2022", "2023"];
-
-    //days array
-    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    //months array
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    var day = days[new Date().getDay()];
-    var month = months[new Date().getMonth()];
-    var date = currentDay.getDate();
-    var year = years[new Date().getFullYear()];
-    var currentTime = [new Date().getHours()];
-
-    if (date === 1 || date === 21 || date === 31){
-      currentDate.text(day + " " + month + " " + date + "st" + ", " + year);
-    }else if (date === 2 || date === 22) {
-
-    }else if (date === 3 || date === 23) {
-
-    }else {
-      currentDate.text(day + " " + month + " " + date + "th" + ", " + year);
-    }
-    
-    var timeBlock = $(".time-block");
-
-    var timeBlockValue = parseInt($(timeBlock[i]).attr("value"));
-    
-
-
-    
 
   
-
-
-    //$(".saveBtn").on("click", function(event) {
-     // event.preventDefault();
-    //})
- 
-    
-    
-
-    
-
-  </script>
-
-
-
-  <script src="script.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
