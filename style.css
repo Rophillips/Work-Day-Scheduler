@@ -7,11 +7,15 @@ body {
 
 textarea{
   background: transparent;
+  text-align: center;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  width: 110%;
+  margin: auto;
+  
 }
 
 .jumbotron {
