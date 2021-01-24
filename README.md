@@ -6,3 +6,4 @@ I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 # Webpage Screenshot
 ![](img.png)
+![image](https://user-images.githubusercontent.com/74886597/105619709-591cd600-5dc3-11eb-9bfc-b5a44ad3a239.png)
