@@ -31,15 +31,7 @@ var date = currentDay.getDate();
 var year = new Date().getYear()
 var currentTime = new Date().getHours();
 
-//if (date === 1 || date === 21 || date === 31){
-  //currentDate.text(day + " " + month + " " + date + "st" + ", " + year);
-//}else if (date === 2 || date === 22) {
 
-//}else if (date === 3 || date === 23) {
-
-//}else {
-  //currentDate.text(day + " " + month + " " + date + "th" + ", " + year);
-//}
 
 var timeBlock = $(".time-block");
 
@@ -68,11 +60,7 @@ for(var i = 0; i < timeBlock.length; i++){
 //push local storage
 var userInput = [];
 
-//function renderTasks() {
-//  for(var i = 0; i < timeBlock.length; i++){
- //   console.log(timeBlockValue[i].children);
- // }
-//}
+
 $(".saveBtn").on("click", function(){
   $(".task").each(function (i){
     var text = $(this).val();
@@ -82,6 +70,5 @@ $(".saveBtn").on("click", function(){
     console.log(time, text);
     localStorage.setItem(time, text);
   })
- // var savedInput = $(this).prev().children().val();
- // localStorage.setItem("userInput", savedInput);
+
 })
