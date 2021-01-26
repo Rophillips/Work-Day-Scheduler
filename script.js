@@ -1,106 +1,62 @@
 
+var todayDate = moment().format('dddd, MMM Do YYYY');
+$("#currentDay").html(todayDate);
 
-//current date and time 
-var d = new Date();
-document.getElementById("currentDay").innerHTML = d.toDateString();
+$(document).ready(function () {
+       // saveBtn click listener 
+    $(".saveBtn").on("click", function () {
+        // Get nearby values of the description in JQuery
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
 
-//hours
-var nine = document.querySelector("#nineAM");
-var ten = document.querySelector("#tenAM");
-var eleven = document.querySelector("#elevenAM");
-var twelve = document.querySelector("#twelvePM");
-var one = document.querySelector("#onePM");
-var two = document.querySelector("#twoPM");
-var three = document.querySelector("#threePM");
-var four = document.querySelector("#fourPM");
-var five = document.querySelector("#fivePM");
+        // Save text in local storage
+        localStorage.setItem(time, text);
+    })
+   
+    function timeTracker() {
+        //get current number of hours.
+        var timeNow = moment().hour();
 
+        // loop over time blocks
+        $(".time-block").each(function () {
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
-console.log(JSON.parse(localStorage.getItem("schedule")))
-var currentDate = $("#currentDay");
+        // To check the time and add the classes for background indicators
+            if (blockTime < timeNow) {
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+            else if (blockTime === timeNow) {
+                $(this).removeClass("past");
+                $(this).removeClass("future");
+                $(this).addClass("present");
+            }
+            else {
+                $(this).removeClass("present");
+                $(this).removeClass("past");
+                $(this).addClass("future");
 
-//days array
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-//months array
-var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-var currentDay = new Date();
-
-var day = days[new Date().getDay()];
-var month = months[new Date().getMonth()];
-var date = currentDay.getDate();
-var year = new Date().getYear()
-var currentTime = new Date().getHours();
-
-var timeBlock = $(".time-block");
-
-//var timeBlockValue = parseInt($(timeBlock[i]).attr("value"));
-
-//if(i === 12){
-//timeBlock.css(["background-color", "red"]);
-//timeBlock.addClass("red-class");
-//}
-//if((new Date()).getHours() === i){ 
-//timeBlock.addClass("red-class");
-//}
-//push local storage
-var userInput = [];
-
-
-function add_blocks_dynamically() {
-  let locally_stored_schedule = JSON.parse(localStorage.getItem("schedule"))
-  for (var i = 9; i <= 17; i++) {
-    // If time is past, present or future
-    let time_class = ""
-    if (i < currentTime) {
-      time_class = "past"
-    } else if (i === currentTime) {
-      time_class = "present"
-    } else if (i > currentTime) {
-      time_class = "future"
+            }
+        })
     }
 
-    // If I is past noon
-    if (i <= 12) {
-      time = i
-      half = "am"
-    } else {
-      time = i - 12
-      half = "pm"
-    }
+    // Get item from local storage if any
+    $("#hour8 .description").val(localStorage.getItem("hour8"));
+    $("#hour9 .description").val(localStorage.getItem("hour9"));
+    $("#hour10 .description").val(localStorage.getItem("hour10"));
+    $("#hour11 .description").val(localStorage.getItem("hour11"));
+    $("#hour12 .description").val(localStorage.getItem("hour12"));
+    $("#hour13 .description").val(localStorage.getItem("hour13"));
+    $("#hour14 .description").val(localStorage.getItem("hour14"));
+    $("#hour15 .description").val(localStorage.getItem("hour15"));
+    $("#hour16 .description").val(localStorage.getItem("hour16"));
+    $("#hour17 .description").val(localStorage.getItem("hour17"));
 
-    if (locally_stored_schedule[`input${i}`] !== "undefined") {
-      stored = locally_stored_schedule[`input${i}`]
-    } else {
-      stored = ""
-    }
-
-
-    $(".container").append(`<div class="row my-row">
-  <div class="col-1 my-col col-b1 hour" id="elevenAM">${time} ${half}</div>
-  <div class="col-9 my-col col-b2 time-block" value="11">
-    <textarea id="input${i}" class="task ${time_class}">${stored}</textarea>
-</div>
-  <button class="col-1 my-col col-b3 fa saveBtn"></button>
-</div>`)
-  }
-}
-
-
-add_blocks_dynamically()
-
-$(".saveBtn").on("click", function () {
-  let schedule = {}
-  $(".task").each(function (i) {
-    var text = $(this).val();
-    console.log(this);
-
-    var time = $(this).attr("id");
-    console.log(time, text);
-    schedule[time] = text
-    ///schedule.push({"input13":time})
-  })
-
-  localStorage.setItem("schedule", JSON.stringify(schedule))
-
+    timeTracker();
 })
+//current date and time 
+// var d = new Date();
+// document.getElementById("currentDay").innerHTML = d.toDateString();
+
+
