@@ -6,3 +6,4 @@ I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 Webpage Screenshot
 ![image](https://user-images.githubusercontent.com/74886597/105633602-90bd6980-5e27-11eb-9a97-fdcba86a3b3a.png)
+![image](https://user-images.githubusercontent.com/74886597/107815768-d47a0380-6d41-11eb-8d10-be3110080b07.png)
